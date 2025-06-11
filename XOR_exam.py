@@ -22,7 +22,7 @@ def xor_decryption(encrypted_text,key):
 def decrypting_no_key(encrypted_text,key_length=3):
     modulu_mat=[]
     for j in range(key_length):
-        modulu_mat.append([encrypted_text[i] for i in range(j,len(encrypted_text),3)])
+        modulu_mat.append([encrypted_text[i] for i in range(j,len(encrypted_text),key_length)])
 
     key=[]
     for i in range(key_length):
