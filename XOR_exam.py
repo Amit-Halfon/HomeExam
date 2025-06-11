@@ -9,7 +9,7 @@ def xor_encryption(text, key):
     return encrypted
 
 #Question A -2
-def xor_decryptor(encrypted_text,key):
+def xor_decryption(encrypted_text,key):
     decrypted=[]
     xor_char=0
     for i in range(len(encrypted_text)):
@@ -18,7 +18,7 @@ def xor_decryptor(encrypted_text,key):
     return "".join(decrypted)
 
 #section B
-#notice this is not brute force as the time complexity for finding the key is O(95*key_length) and not O(95^key_length)
+#notice this is not brute force as the time complexity for finding the key is O(95*key_length) and not O(95**key_length)
 def decypting_no_key(encrypted_text,key_length=3):
     modulu_mat=[]
     for j in range(key_length):
@@ -28,7 +28,7 @@ def decypting_no_key(encrypted_text,key_length=3):
     for i in range(key_length):
         key.append(findMaxCandidate(modulu_mat[i]))
 
-    return xor_decryptor(encrypted_text,"".join(key))
+    return xor_decryption(encrypted_text,"".join(key))
 
 
 def findMaxCandidate(group):
