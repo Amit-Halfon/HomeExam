@@ -1,6 +1,5 @@
 #question A -1
 def xor_encryption(text, key):
-    # Initialize an empty string for encrypted text
     encrypted = []
     xor_char=0
     for i in range(len(text)):
