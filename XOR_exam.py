@@ -17,7 +17,6 @@ def xor_decryption(encrypted_text,key):
     return "".join(decrypted)
 
 #section B
-#notice this is not brute force as the time complexity for finding the key is O(95*key_length) and not O(95**key_length)
 def decrypting_no_key(encrypted_text,key_length):
     modulu_mat=[]
     for j in range(key_length):
